@@ -1,5 +1,4 @@
 
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +17,14 @@
 
 <div align="center">
     <h1 align=left style="margin-top: 5%; margin-left: 181pt; font-size: 300%; font-weight: bold;">copypasta.me</h1>
+
+    {% for post in posts %}
 <div class="card h-200" align="left" style="width: 90rem; min-height: 30rem;">
     
     <div class="card-body">
-      <h5 class="card-title" style="font-size: 30pt;">The Navy Seal Copypasta</h5>
+      <h5 class="card-title" style="font-size: 30pt;">{{ post.title }}</h5>
       <p class="card-text" style="line-height: 178%;">
-    
-test
+    {{ post.content }}
     </p>
             
     </div>
@@ -39,6 +39,7 @@ test
         </div>
       </div>
   </div>
+  {% endfor %}
 </div>
 
 </body>
