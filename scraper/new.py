@@ -3,7 +3,7 @@ import json, requests
 subreddit = 'copypasta'
 
 r = requests.get(
-    'http://www.reddit.com/r/{}.json'.format(subreddit),
+    'http://www.reddit.com/r/{}.json?limit=1000'.format(subreddit),
     headers={'user-agent': 'Mozilla/5.0'})
 
 post_list = []

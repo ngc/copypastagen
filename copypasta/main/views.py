@@ -4,14 +4,14 @@ from .models import Post
 import json
 import random
 
-with open("/home/nathan/Desktop/copypasta/copypasta/main/static/data.json", 'r') as f:
+with open("/home/nathan/Desktop/copypasta/scraper/data.json", 'r') as f:
     posts_dict = json.load(f)
 
 def gen():
     # Create your views here
     global p
     p = []
-    p.append(posts_dict[random.randint(0, 24)])
+    p.append(posts_dict[random.randint(0, len(posts_dict) - 1)])
 
 gen()
 
